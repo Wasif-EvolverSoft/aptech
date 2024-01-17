@@ -1,0 +1,447 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./Assets/CSS/style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Sen:wght@400;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <title>StreamEase - Your One-Stop Solution For Movies</title>
+    <link rel="shortcut icon" href="/img/faivcon.png" type="image/x-icon">
+
+</head>
+
+<body>
+
+    <!-- Nav Menu Starts -->
+    <div class="navbar">
+        <div class="navbar-container">
+            <div class="logo-container">
+                <h1 class="logo"><a href='/'>StreamEase</a></h1>
+            </div>
+            <div class="profile-container profile-relative">
+                <!-- <button
+                    style="background-color: #e9de09; padding: 5px 10px; margin-right: 20px;  border-radius: 25px; font-weight: 600;"
+                    id="loginShow">Login / SignUp</button> -->
+                <div class="toggle">
+                    <i class="fas fa-moon toggle-icon"></i>
+                    <i class="fas fa-sun toggle-icon"></i>
+                    <div class="toggle-ball"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Nav Menu Ends -->
+    <!-- Sidebar Starts -->
+    <div class="sidebar">
+        <a href='/'><i class="left-menu-icon fas fa-home"></i></a>
+        <a href='/profile'><i class="left-menu-icon fas fa-user"></i></a>
+        <a id="favorite"><i class="left-menu-icon fas fa-heart"></i></a>
+        <a href='/stream'><i class="left-menu-icon fas fa-tv"></i></a>
+        <a href='/feedback'><i class="left-menu-icon fas fa-comment"></i></a>
+        <a id="showNotifications"><i class="left-menu-icon fas fa-bell"></i></a>
+        <a href='/contact'><i class="left-menu-icon fas fa-envelope"></i></a>
+        <img class="profile-picture" src="./Assets/IMG/profile.jpg" alt="">
+    </div>
+    <!-- Sidebar Ends -->
+
+    <!-- Main Container Starts -->
+    <div class="container">
+        <div class="content-container">
+            <!-- Hero Section Starts -->
+            <div class="featured-content">
+                <div class="background-opacity"></div>
+                <video src="./Assets/video/SpiderMan.mp4" autoplay muted loop class="banner-vidoe"></video>
+                <div class="featured-content-container">
+                    <img class="featured-title" src="./Assets/IMG/logo.png" alt="">
+                    <p class="featured-desc">In his origin story, Spider-Man gets his superhuman spider-powers and
+                        abilities after being bitten by a radioactive spider; these include superhuman strength,
+                        agility, reflexes, stamina, durability, coordination, and balance, clinging to surfaces and
+                        ceilings like a spider, and detecting danger with his precognition
+                    </p>
+                    <button class="featured-button" id="showSubscription">Add Your Subscription</button>
+                </div>
+            </div>
+            <!-- Hero Section Ends -->
+
+            <!-- Movie List Slider Starts -->
+            <div class="movie-list-container">
+                <h1 class="movie-list-title"><span style="color: red; font-size: 50px;">N</span>ETFLIX TRENDING</h1>
+                <div class="movie-list-wrapper">
+                    <div class="movie-list" id="netflix">
+                        <!-- This Data is coming from JSON -->
+                    </div>
+                    <i class="fas fa-chevron-right arrow"></i>
+                </div>
+            </div>
+            <!-- Movie List Slider Ends -->
+
+            <!-- Movie List Slider Starts -->
+            <div class="movie-list-container">
+                <h1 class="movie-list-title"><span style="color: #7d7d7d; font-size: 50px;">A</span>pple TV trending
+                </h1>
+                <div class="movie-list-wrapper">
+                    <div class="movie-list" id="applePlay">
+                        <!-- This Data is coming from JSON -->
+                    </div>
+                    <i class="fas fa-chevron-right arrow"></i>
+                </div>
+            </div>
+            <!-- Movie List Slider Ends -->
+
+            <!-- Featued Content Starts -->
+            <div class="featured-content">
+                <div class="background-opacity"></div>
+                <div class="background-video">
+                    <video src="/Assets/video/Quite-Place.mp4" autoplay muted loop></video>
+                </div>
+                <div class="featured-content-container">
+                    <img class="featured-title" src="./Assets/IMG/A-Quiet-Place-HD.png" alt="">
+                    <p class="featured-desc">Immerse yourself in the gripping world of "A Quiet Place." With
+                        heart-pounding suspense and emotional depth, this cinematic masterpiece is a must-watch.
+                        Experience survival like never before as silence becomes your lifeline. Don't miss the chance to
+                        be captivated from start to finish. Silence has never been this thrilling.</p>
+                    <button class="featured-button">WATCH</button>
+                </div>
+            </div>
+            <!-- Featued Content Ends -->
+
+            <!-- Movie List Slider Starts -->
+            <div class="movie-list-container">
+                <h1 class="movie-list-title"><span span style="color: #00A8E1; font-size: 50px;">A</span>mazon Prime
+                </h1>
+                <div class="movie-list-wrapper">
+                    <div class="movie-list" id="amazonPrime">
+                        <!-- This data will come from JSOn -->
+                    </div>
+                    <i class="fas fa-chevron-right arrow"></i>
+                </div>
+            </div>
+            <!-- Movie List Slider Ends -->
+
+            <!-- Movie List Slider Starts -->
+            <div class="movie-list-container">
+                <h1 class="movie-list-title"><span span style="color: #006e99; font-size: 50px;">D</span>isney HotStar
+                </h1>
+                <div class="movie-list-wrapper">
+                    <div class="movie-list" id="disneyHotstar">
+                        <!-- This Data will come from JSON -->
+                    </div>
+                    <i class="fas fa-chevron-right arrow"></i>
+                </div>
+            </div>
+            <!-- Movie List Slider Ends -->
+        </div>
+        <div class="footer">
+            <div class="logo-container">
+                <h1 class="logo"><a href="/main-content/index.html">StreamEase</a></h1>
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    <p>Your all-in-one Subscription Management + Streaming hub. Simplify subscriptions, access content
+                        seamlessly, and get personalized recommendations. Elevate your streaming experience today!</p>
+                </div>
+                <div class="col"></div>
+                <div class="col">
+                    <a href="./home">Home</a>
+                    <a href="./profile">Profile</a>
+                    <a href="./watch">Watch Now</a>
+                    <a href="./feedback">Feedback</a>
+                    <a href="./contact">Contact</a>
+
+                </div>
+
+
+            </div>
+            <button class="languag-btn">English</button>
+            <p class="CopyRight-text">Design And Developed By Team DisplayFlex</p>
+        </div>
+    </div>
+
+
+    <!-- Notification Starts -->
+    <div class="notification-Container" id="notifData">
+        <!-- Data Will Come From JSON -->
+    </div>
+    <!-- Notification Ends -->
+
+    <!-- Favorite Starts -->
+    <div class="favorite-container">
+        <div class="favoritee-content-container">
+            <h2>All Favorites</h2>
+            <div class="main-favorite-container" id="favoriteContainer">
+                <!-- <div class="favorite-card">
+                    <div class="img-container">
+                        <img src="./Assets/IMG/money-heist.png" alt="">
+                        <div class="options">
+                            <i class="fa fa-play"></i>
+                            <i class="fa fa-times"></i>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </div>
+    <!-- Favorite Ends -->
+
+
+    <!-- Subscription Popups Starts -->
+    <div class="subscription-popup-conainer" id="subsPopup">
+        <div class="subscription-container">
+            <button id="closeePopup">
+                <i class="fa fa-times"></i>
+            </button>
+            <div class="subscription-content-container">
+
+
+                <h2>Combine Your Services</h2>
+                <p class="subsdesc">Hit the + to add eeach service you use. You won't neeet account info (Like your
+                    netflix login) to
+                    combine your services. Stream Ease will link you directly to thee service to play an episode or
+                    movie</p>
+
+                <div class="search">
+                    <input type="search" name="service-seearch" id="searchService"
+                        placeholder="Search For Specific Subscription">
+                </div>
+
+                <div class="filter-OTT">
+                    <p>Filter by Price</p>
+                    <select name="Cost" id="Cost">
+                        <option value="0">Relevance</option>
+                        <option value="1">Low To High</option>
+                        <option value="2">High To Low</option>
+                    </select>
+                </div>
+
+                <div id="addYourOwnPlatform">
+                    <button>Add Custom Service</button>
+                </div>
+
+                <div class="available-ott-platoforms">
+                    <div class="OTTPlatformContainr">
+                        <button class="OTTPlatform">
+                            <img src="./Assets/IMG/OTT Platform Logos/netflix.png" alt="">
+                            <h2>Add <i class="fa fa-plus" aria-hidden="true"></i></h2>
+                        </button>
+                        <button class="OTTPlatform">
+                            <img src="./Assets/IMG/OTT Platform Logos/Amazon-Prime.png" alt="">
+                            <h2>Add <i class="fa fa-plus" aria-hidden="true"></i></h2>
+                        </button>
+                        <button class="OTTPlatform">
+                            <img src="./Assets/IMG/OTT Platform Logos/apple-tv.png" alt="">
+                            <h2>Add <i class="fa fa-plus" aria-hidden="true"></i></h2>
+                        </button>
+                        <button class="OTTPlatform">
+                            <img src="./Assets/IMG/OTT Platform Logos/Angel-Studio.png" alt="">
+                            <h2>Add <i class="fa fa-plus" aria-hidden="true"></i></h2>
+                        </button>
+                        <button class="OTTPlatform">
+                            <img src="./Assets/IMG/OTT Platform Logos/directTV.png" alt="">
+                            <h2>Add <i class="fa fa-plus" aria-hidden="true"></i></h2>
+                        </button>
+                    </div>
+                    <div class="OTTPlatformContainr">
+                        <button class="OTTPlatform">
+                            <img src="./Assets/IMG/OTT Platform Logos/hulu.png" alt="">
+                            <h2>Add <i class="fa fa-plus" aria-hidden="true"></i></h2>
+                        </button>
+                        <button class="OTTPlatform">
+                            <img src="./Assets/IMG/OTT Platform Logos/max.png" alt="">
+                            <h2>Add <i class="fa fa-plus" aria-hidden="true"></i></h2>
+                        </button>
+                        <button class="OTTPlatform">
+                            <img src="./Assets/IMG/OTT Platform Logos/Paramount.png" alt="">
+                            <h2>Add <i class="fa fa-plus" aria-hidden="true"></i></h2>
+                        </button>
+                        <button class="OTTPlatform">
+                            <img src="./Assets/IMG/OTT Platform Logos/Pluto-TV.png" alt="">
+                            <h2>Add <i class="fa fa-plus" aria-hidden="true"></i></h2>
+                        </button>
+                        <button class="OTTPlatform">
+                            <img src="./Assets/IMG/OTT Platform Logos/Tubi-TV.png" alt="">
+                            <h2>Add <i class="fa fa-plus" aria-hidden="true"></i></h2>
+                        </button>
+                    </div>
+                    <div class="OTTPlatformContainr">
+                        <button class="OTTPlatform">
+                            <img src="./Assets/IMG/OTT Platform Logos/hulu.png" alt="">
+                            <h2>Add <i class="fa fa-plus" aria-hidden="true"></i></h2>
+                        </button>
+                        <button class="OTTPlatform">
+                            <img src="./Assets/IMG/OTT Platform Logos/max.png" alt="">
+                            <h2>Add <i class="fa fa-plus" aria-hidden="true"></i></h2>
+                        </button>
+                        <button class="OTTPlatform">
+                            <img src="./Assets/IMG/OTT Platform Logos/Paramount.png" alt="">
+                            <h2>Add <i class="fa fa-plus" aria-hidden="true"></i></h2>
+                        </button>
+                        <button class="OTTPlatform">
+                            <img src="./Assets/IMG/OTT Platform Logos/Pluto-TV.png" alt="">
+                            <h2>Add <i class="fa fa-plus" aria-hidden="true"></i></h2>
+                        </button>
+                        <button class="OTTPlatform">
+                            <img src="./Assets/IMG/OTT Platform Logos/Tubi-TV.png" alt="">
+                            <h2>Add <i class="fa fa-plus" aria-hidden="true"></i></h2>
+                        </button>
+                    </div>
+                    <div class="OTTPlatformContainr">
+                        <button class="OTTPlatform">
+                            <img src="./Assets/IMG/OTT Platform Logos/hulu.png" alt="">
+                            <h2>Add <i class="fa fa-plus" aria-hidden="true"></i></h2>
+                        </button>
+                        <button class="OTTPlatform">
+                            <img src="./Assets/IMG/OTT Platform Logos/max.png" alt="">
+                            <h2>Add <i class="fa fa-plus" aria-hidden="true"></i></h2>
+                        </button>
+                        <button class="OTTPlatform">
+                            <img src="./Assets/IMG/OTT Platform Logos/Paramount.png" alt="">
+                            <h2>Add <i class="fa fa-plus" aria-hidden="true"></i></h2>
+                        </button>
+                        <button class="OTTPlatform">
+                            <img src="./Assets/IMG/OTT Platform Logos/Pluto-TV.png" alt="">
+                            <h2>Add <i class="fa fa-plus" aria-hidden="true"></i></h2>
+                        </button>
+                        <button class="OTTPlatform">
+                            <img src="./Assets/IMG/OTT Platform Logos/Tubi-TV.png" alt="">
+                            <h2>Add <i class="fa fa-plus" aria-hidden="true"></i></h2>
+                        </button>
+                    </div>
+                    <div class="OTTPlatformContainr">
+                        <button class="OTTPlatform">
+                            <img src="./Assets/IMG/OTT Platform Logos/hulu.png" alt="">
+                            <h2>Add <i class="fa fa-plus" aria-hidden="true"></i></h2>
+                        </button>
+                        <button class="OTTPlatform">
+                            <img src="./Assets/IMG/OTT Platform Logos/max.png" alt="">
+                            <h2>Add <i class="fa fa-plus" aria-hidden="true"></i></h2>
+                        </button>
+                        <button class="OTTPlatform">
+                            <img src="./Assets/IMG/OTT Platform Logos/Paramount.png" alt="">
+                            <h2>Add <i class="fa fa-plus" aria-hidden="true"></i></h2>
+                        </button>
+                        <button class="OTTPlatform">
+                            <img src="./Assets/IMG/OTT Platform Logos/Pluto-TV.png" alt="">
+                            <h2>Add <i class="fa fa-plus" aria-hidden="true"></i></h2>
+                        </button>
+                        <button class="OTTPlatform">
+                            <img src="./Assets/IMG/OTT Platform Logos/Tubi-TV.png" alt="">
+                            <h2>Add <i class="fa fa-plus" aria-hidden="true"></i></h2>
+                        </button>
+                    </div>
+                </div>
+                <div class="OTTFooter">
+                    Looking for more services? While Reelgood does support over 150, many of those are "bundled" into
+                    various offerings above, including the Free Bundle which includes over 50 services including
+                    Crackle, TubiTV, Vudu, PopcornFlix, and many more. We also support many rent and purchase services
+                    which can be viewed on any tv or movies page and browsed by selecting "Rent or Buy" on any browse
+                    page. Any more questions? Contact our support team.
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Subscription Popups Ends -->
+
+
+    <!-- Login POPUP Start -->
+    <div class="login-popup-container" id="loginContainer" style="display: none;">
+        <!-- Login Form -->
+        <div class="login-container" id="LoginForm">
+            <button class="closePopup" id="closeLogin">
+                <i class="fa fa-times"></i>
+            </button>
+            <h2>Enter Your Login Information</h2>
+            <p>Enter Your Correct Information to login in to the <span style="color: #e9de09;">Stream Ease</span>
+                portal, <br> If You Haven't Have Account You Can Create By <a id="SignUpbtn"
+                    style="color: black; text-decoration: underline; cursor: pointer; color: white;">Signing Up</a></p>
+            <form action="#">
+                <div class="username">
+                    <input type="text" name="Usrename" id="UserenameLogin" placeholder="Enter Userename">
+                </div>
+                <div class="password">
+                    <input type="password" name="password" id="passwordLogin" placeholder="Enter Your Password">
+                </div>
+                <p><a style="color: white; text-decoration: underline; cursor: pointer; color: white;"
+                        id="forgotbtn">Forgot
+                        Password?</a></p>
+                <div class="submit">
+                    <input type="submit" value="Submit" id="submit">
+                </div>
+            </form>
+        </div>
+        <!-- Login Form -->
+
+
+        <!-- SignUp Form -->
+        <div class="login-container" id="SignUpPopup" style="display: none;">
+            <button class="closePopup" id="closeSignup">
+                <i class="fa fa-times"></i>
+            </button>
+            <h2>Enter Your Sign Up Information</h2>
+            <p>Enter Your Correct Information to SignUp for the <span style="color: #e9de09;">Stream Ease</span> portal,
+                <br> If You Already Have Account You Can Login using <a id="Loginbtn"
+                    style="color: black; text-decoration: underline; cursor: pointer; color: white;">login</a>
+            </p>
+            <form action="#">
+                <div class="username">
+                    <input type="text" name="FullName" id="fName" placeholder="Enter Full Name">
+                </div>
+                <div class="username">
+                    <input type="text" name="username" id="username" placeholder="Enter Username">
+                </div>
+                <div class="username">
+                    <input type="email" name="email" id="email" placeholder="Enter Email Address">
+                </div>
+                <div class="password">
+                    <input type="password" name="password" id="password" placeholder="Enter Your Password">
+                </div>
+                <!-- <p><a style="color: black; text-decoration: underline; cursor: pointer; color: black;">Forgot Password?</a></p> -->
+                <div class="submit">
+                    <input type="submit" value="Submit" id="submit">
+                </div>
+            </form>
+        </div>
+        <!-- SignUp Form -->
+
+
+        <!-- Forgot Password Form -->
+        <div class="login-container" id="ForgotPassword" style="display: none;">
+            <button class="closePopup" id="closeForget">
+                <i class="fa fa-times"></i>
+            </button>
+            <h2>Did You Forgot Your Password?</h2>
+            <p>Enter Your Username And Email Information we will send you <br> an email to reset your password to login
+                to <span style="color: #e9de09;">Stream Ease</span> portal.</p>
+            <form action="#">
+                <div class="username">
+                    <input type="text" name="Usrename" id="Userename" placeholder="Enter Userename">
+                </div>
+                <div class="password">
+                    <input type="email" name="password" id="password" placeholder="Enter Your email">
+                </div>
+                <div class="submit">
+                    <input type="submit" value="Update" id="submit">
+                </div>
+            </form>
+        </div>
+        <!-- Forgot Password Form -->
+    </div>
+    <!-- Login POPUP EEnds -->
+
+    <!-- JavaScript Files -->
+
+
+
+    <!-- JSON File -->
+    <script src="Assets/JS/movies.json"></script>
+    <script src="Assets/JS/notification.json"></script>
+
+    <!-- Custom JavaScript File -->
+    <script src="./Assets/JS/app.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,191 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./Assets/CSS/feedback.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Sen:wght@400;700;800&display=swap"
+        rel="stylesheet">
+    <title>StreamEase - Your One-Stop Solution For Movies</title>
+    <link rel="shortcut icon" href="/img/faivcon.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <script src="./Assets/JS/feedback.js" defer></script>
+</head>
+
+<body>
+
+    <!-- Nav Menu Starts -->
+    <div class="navbar">
+        <div class="navbar-container">
+            <div class="logo-container">
+                <h1 class="logo"><a href='/'>StreamEase</a></h1>
+            </div>
+            <div class="profile-container profile-relative">
+                <div class="toggle">
+                    <i class="fas fa-moon toggle-icon"></i>
+                    <i class="fas fa-sun toggle-icon"></i>
+                    <div class="toggle-ball"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Nav Menu Ends -->
+    <!-- Sidebar Starts -->
+    <div class="sidebar">
+        <a href='/'><i class="left-menu-icon fas fa-home"></i></a>
+        <a href='/profile'><i class="left-menu-icon fas fa-user"></i></a>
+        <a id="favorite"><i class="left-menu-icon fas fa-heart"></i></a>
+        <a href='/stream'><i class="left-menu-icon fas fa-tv"></i></a>
+        <a href='/feedback'><i class="left-menu-icon fas fa-comment"></i></a>
+        <a id="showNotifications"><i class="left-menu-icon fas fa-bell"></i></a>
+        <a href='/contact'><i class="left-menu-icon fas fa-envelope"></i></a>
+        <img class="profile-picture" src="./Assets/IMG/profile.jpg" alt="">
+    </div>
+    <!-- Sidebar Ends -->
+    <div class="container">
+        <div class="left-content">
+            <h2>this our feedback from our client</h2>
+            <p>Client Feedback: A testament to our exceptional quality, responsive communication, and collaborative
+                approach. We're grateful for the trust our client placed in us, and we're committed to exceeding
+                expectations in every project. This feedback fuels our drive for excellence.</p>
+            <button class="review-btn" id="showFeedBack">add review</button>
+        </div>
+
+        <div class="wrapper">
+            <i id="left" class="fa-solid fa-angle-left"></i>
+            <ul class="carousel">
+                <li class="card">
+                    <h3>What Our Client Says</h3>
+                    <div class="img"><img src="./Assets/IMG/testi1.jpg" alt="img" draggable="false"></div>
+                    <h2>Blanche Pearson</h2>
+                    <span>Sales Manager</span>
+                    <p>"Stream Ease's seamless interface, diverse content, and flawless streaming quality make it a
+                        worthy companion for anyone seeking the Netflix magic with a fresh twist."</p>
+                </li>
+                <li class="card">
+                    <h3>What Our Client Says</h3>
+                    <div class="img"><img src="./Assets/IMG/testi2.jpg" alt="img" draggable="false"></div>
+                    <h2>Joenas Brauers</h2>
+                    <span>Web Developer</span>
+                    <p>"Stream Ease, a close parallel to the beloved streaming giant, impresses with its diverse
+                        content, intuitive interface, and uninterrupted streaming, earning it a top spot in my
+                        favorites."</p>
+                </li>
+                <li class="card">
+                    <h3>What Our Client Says</h3>
+                    <div class="img"><img src="./Assets/IMG/testi3.jpg" alt="img" draggable="false"></div>
+                    <h2>Lariach French</h2>
+                    <span>Online Teacher</span>
+                    <p>"Stream Ease is like discovering a twin of your favorite streaming service, complete with a vast
+                        content selection, easy navigation, and an overall enjoyable viewing journey."</p>
+                </li>
+                <li class="card">
+                    <h3>What Our Client Says</h3>
+                    <div class="img"><img src="./Assets/IMG/testi4.jpg" alt="img" draggable="false"></div>
+                    <h2>James Khosravi</h2>
+                    <span>Freelancer</span>
+                    <p>"For those seeking a Netflix-like experience with a twist, Stream Ease delivers on all fronts,
+                        offering an extensive library, smooth playback, and personalized recommendations."</p>
+                </li>
+                <li class="card">
+                    <h3>What Our Client Says</h3>
+                    <div class="img"><img src="./Assets/IMG/img-5.jpg" alt="img" draggable="false"></div>
+                    <h2>Kristina Zasiadko</h2>
+                    <span>Bank Manager</span>
+                    <p>"A streaming gem in its own right, Stream Ease mirrors the best aspects of Netflix while carving
+                        its path with impeccable streaming quality and an engaging collection of entertainment."</p>
+                </li>
+                <li class="card">
+                    <h3>What Our Client Says</h3>
+                    <div class="img"><img src="./Assets/IMG/img-6.jpg" alt="img" draggable="false"></div>
+                    <h2>Donald Horton</h2>
+                    <span>App Designer</span>
+                    <p>"An uncanny resemblance to Netflix, this streaming portal delivers a content-packed punch with a
+                        smooth viewing experience. It's a streaming twin worth exploring!"</p>
+                </li>
+            </ul>
+            <i id="right" class="fa-solid fa-angle-right"></i>
+        </div>
+
+        <div class="popup-main-container" id="feedbackContainer" style="display: none;">
+            <div class="feed-popup-cont">
+                <h3>enter your information to review</h3>
+                <p>enter your current information to review in to the <span style="color: yellow;"> steam ease </span>
+                    portal,</p>
+                <input class="feed-input" type="text" placeholder="Username" required name="" id="">
+                <input class="feed-input" type="email" placeholder="Email" required name="" id="">
+                <textarea class="feed-text" placeholder="Type Something" name="" id="" cols="30" rows="10"></textarea>
+                <button id="closefeedback"><i class="fa fa-times"></i></button>
+                <button class="feed-submit">Submit</button>
+            </div>
+        </div>
+
+
+
+        <!-- <div class="container-testi">
+            <div class="slider">
+                <button class="prev-button">Previous</button>
+                <div class="testimonial-1">
+                  
+                    <p>Testimonial 1 content</p>
+                   
+                    <img src="./Assets/IMG/testi1.jpg" alt="">
+                 
+                </div>
+                
+                <div class="testimonial-2">
+                    <p>Testimonial 2 content</p>
+                    
+                    <img src="./Assets/IMG/testi2.jpg" alt="">
+                    
+                </div>
+                
+               
+            </div>
+            <button class="next-button">Next</button>
+        </div> -->
+
+
+    </div>
+
+
+
+
+    <script src="slider.js"></script>
+    <script>
+        const slider = document.querySelector(".slider");
+        const testimonials = document.querySelectorAll(".slider > div");
+        const testimonialWidth = testimonials[0].clientWidth;
+        let currentIndex = 0;
+
+        function slideToIndex(index) {
+            currentIndex = index;
+            slider.style.transform = `translateX(-${currentIndex * testimonialWidth}px)`;
+        }
+
+        function slideNext() {
+            currentIndex = (currentIndex + 1) % testimonials.length;
+            slideToIndex(currentIndex);
+        }
+
+        function slidePrevious() {
+            currentIndex = (currentIndex - 1 + testimonials.length) % testimonials.length;
+            slideToIndex(currentIndex);
+        }
+
+        // Handle next and previous button clicks
+        document.querySelector(".next-button").addEventListener("click", slideNext);
+        document.querySelector(".prev-button").addEventListener("click", slidePrevious);
+
+    </script>
+    <!-- JSON File -->
+    <script src="Assets/JS/movies.json"></script>
+    <script src="Assets/JS/notification.json"></script>
+
+    <!-- Custom JavaScript File -->
+    <script src="./app.js"></script>
+</body>
+
+</html>

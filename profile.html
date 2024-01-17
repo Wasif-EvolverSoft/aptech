@@ -1,0 +1,353 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./Assets/CSS/navbar.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Sen:wght@400;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <title>StreamEase - Your One-Stop Solution For Movies</title>
+    <link rel="shortcut icon" href="/img/faivcon.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="./Assets/CSS/profile.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.min.css">
+
+
+</head>
+
+<body>
+
+    <!-- Nav Menu Starts -->
+    <div class="navbar">
+        <div class="navbar-container" style="display: flex;justify-content: space-between;">
+            <div class="logo-container ">
+                <h1 class="logo"><a href='/'>StreamEase</a></h1>
+            </div>
+            <div class="profile-container profile-relative mx-5" style="position: absolute;right: 0;">
+                <div class="toggle">
+                    <i class="fas fa-moon toggle-icon"></i>
+                    <i class="fas fa-sun toggle-icon"></i>
+                    <div class="toggle-ball"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Nav Menu Ends -->
+    <!-- Sidebar Starts -->
+    <div class="sidebar">
+        <a href='/'><i class="left-menu-icon fas fa-home"></i></a>
+        <a href='/profile'><i class="left-menu-icon fas fa-user"></i></a>
+        <a id="favorite"><i class="left-menu-icon fas fa-heart"></i></a>
+        <a href='/stream'><i class="left-menu-icon fas fa-tv"></i></a>
+        <a href='/feedback'><i class="left-menu-icon fas fa-comment"></i></a>
+        <a id="showNotifications"><i class="left-menu-icon fas fa-bell"></i></a>
+        <a href='/contact'><i class="left-menu-icon fas fa-envelope"></i></a>
+        <img class="profile-picture" src="./Assets/IMG/profile.jpg" alt="">
+    </div>
+    <!-- Sidebar Ends -->
+    <div class="header" style="height: 350px;">
+        <div class="container-fluid">
+            <div class="row mb-5">
+                <div class="col-md-10 m-auto mt-5">
+                    <div class="row mt-5">
+                        <div class="col-md-2">
+                            <div class="img_container d-flex">
+                                <img src="./Assets/IMG//profile.jpg" class="mt-2" alt="Profile Picture"
+                                    style="width: 100px; object-fit: cover; border-radius: 50%;" height="100px">
+                                <div class="t">
+                                    <label id="profileUsername" class="fs-1 text-white mt-2 ms-5">Username</label>
+                                    <label id="profileUserId" class="text-white mt-2 ms-5" style="font-size: 1.2em;">Id
+                                        : 000000</label>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <div class="main-container">
+    <div class="container mb-5 mt-5" style="background-color: transparent;">
+        <div class="row mt-5" style="background-color: transparent;">
+            <div class="col-md-12" style="background-color: transparent;">
+                <div class="card" style="background-color: transparent; color: #fff;border: none;">
+                    <div class="card-body text-center border-0">
+                        <h3 class="p-0" style="font-size: 1.8em;">Favourite</h3>
+                        <div class="card_img_container mb-2"
+                            style="display: flex;flex-direction: column ;align-items: center;">
+                            <img src="./Assets/IMG//logowubg 5.png" class="img-fluid flipping-animation" alt="Logo"
+                                style="height: 30px;width: 30px;">
+                            <img src="./Assets/IMG//line.png " class="img-fluid " alt="Logo"
+                                style="height: 20px;width: 200px;position: relative;top: -20px;">
+                        </div>
+                        <h3 class="mb-5" style="color: gray;">Please Add An Item To Favourite</h3>
+
+                        <h3 class="p-0" style="font-size: 1.8em;">Your Subcriptions</h3>
+                        <div class="card_img_container mb-2"
+                            style="display: flex;flex-direction: column ;align-items: center;">
+                            <img src="./Assets/IMG//logowubg 5.png" class="img-fluid flipping-animation" alt="Logo"
+                                style="height: 30px;width: 30px;">
+                            <img src="./Assets/IMG//line.png " class="img-fluid " alt="Logo"
+                                style="height: 20px;width: 200px;position: relative;top: -20px;">
+                        </div>
+                        <div class="static-subs" style="display: flex;flex-direction: column;">
+                            <div class="row1 mb-3  flex-column custom-flex-sm-row"
+                                style="display: flex;justify-content: space-evenly;">
+                                <img src="./Assets/IMG/ 5.svg" alt="" class="img-fluid mx-2 mb-3" style="height: 60px;">
+                                <img src="./Assets/IMG//hulu 5.svg" alt="" class="img-fluid mx-2 mb-3"
+                                    style="height: 60px;">
+                                <img src="./Assets/IMG//directv 4.svg" alt="" class="img-fluid mx-2 mb-3"
+                                    style="height: 60px;">
+                                <img src="./Assets/IMG//amazon_prime 5.svg" alt="" class="img-fluid mx-2 mb-3"
+                                    style="height: 60px;">
+
+                            </div>
+                            <div class="row2 mx-5" style="display: flex;justify-content: center;">
+                                <button class="btn btn_user mb-5 p-2 fa-bounce">+</button>
+                            </div>
+                        </div>
+
+                        <h3 class="p-0" style="font-size: 1.8em;">Subcription Limit</h3>
+                        <div class="card_img_container mb-2"
+                            style="display: flex;flex-direction: column ;align-items: center;">
+                            <img src="./Assets/IMG//logowubg 5.png" class="img-fluid flipping-animation" alt="Logo"
+                                style="height: 30px;width: 30px;">
+                            <img src="./Assets/IMG//line.png " class="img-fluid " alt="Logo"
+                                style="height: 20px;width: 200px;position: relative;top: -20px;">
+                        </div>
+
+
+
+                        <div class=" expiry" style="display: flex;align-items: center;justify-content: flex-start;"
+                            id="netflixCard" data-card-id="netflixCard">
+                            <img src="./Assets/IMG/ 5.svg" alt="" class="img-fluid mx-5" style="height: 110px;">
+
+                            <div class="exp" style="text-align: left;">
+                                <h1>Netflix</h1>
+                                <p style="display: flex;">Expires On <span class="mx-1" id="oldParagraph">4 10
+                                        2023</span> </p>
+                                <div id="timer1">
+
+                                    <p class="countdown"></p>
+                                </div>
+                            </div>
+                            <div class="butdiv mx-5"
+                                style="position: absolute;right: 0;display: flex;flex-direction: column;">
+                                <button class="edit-button  btn btn_user" data-timer-id="timer1" style="scale: .8;"
+                                    id="updateButton">Edit</button>
+                                <button class="delete-button mt-2 btn btn_user" data-card-id="netflixCard"
+                                    style="scale: .8;">Delete</button>
+                            </div>
+
+                        </div>
+                        <div class=" expiry mt-5" style="display: flex;align-items: center;justify-content: flex-start;"
+                            id="huluCard" data-card-id="huluCard">
+                            <img src="./Assets/IMG//hulu 5.svg" alt="" class="img-fluid mx-5" style="height: 110px;">
+                            <div class="exp" style="text-align: left;">
+                                <h1>Hulu</h1>
+                                <p>Expires On 25 August 2023</p>
+                                <div id="timer2">
+
+                                    <p class="countdown"></p>
+                                </div>
+
+                            </div>
+                            <div class="butdiv mx-5"
+                                style="position: absolute;right: 0;display: flex;flex-direction: column;">
+                                <button class="edit-button  btn btn_user" data-timer-id="timer1"
+                                    style="scale: .8;">Edit</button>
+                                <button class="delete-button mt-2 btn btn_user" data-card-id="huluCard"
+                                    style="scale: .8;">Delete</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer -->
+    <!-- <footer class="page-footer font-small p-4">
+        <div class="row">
+            <div class="col-md-3 p-4 mb-3">
+                <div class="logo d-md-block"><img src="./Assets/IMG//logowubg 5.png" alt="footer_logo">
+                    <h2 class="logo_heading">STREAM EASE</h2>
+                </div>
+            </div>
+            <div class="col-md-3 p-4 mb-3">
+                <h3><i class="fa-solid fa-globe fa-bounce pe-4 pb-3"></i>What is Stream Ease</h3>
+                <hr>
+                <p class="fs-5 fw-bold">Stream Ease is a Websitewhere you can manage all you streaming services from
+                    one place. You can
+                    track your subscription expiration you can watch latest movies etc.</p>
+            </div>
+            <div class="col-md-3 p-4 mb-3">
+                <h3><i class="fa-solid fa-globe fa-bounce pe-4 pb-3"></i>What is Streaming</h3>
+                <hr>
+                <h5>What's on Netflix | New</h5>
+                <h5>What's on Hulu | New</h5>
+                <h5>What's on HBO | New</h5>
+                <h5>What's on Prime Video | New</h5>
+                <h5>Site Map</h5>
+                <hr>
+            </div>
+            <div class="col-md-3 p-4 mb-3">
+                <h3><i class="fa-solid fa-globe fa-bounce pe-4 pb-3"></i>Company</h3>
+                <hr>
+                <h5 class="fw-bold">About Stream Ease</h5>
+                <h5 class="fw-bold">For Buisness</h5>
+                <h5 class="fw-bold">Contact Us</h5>
+                <h5 class="fw-bold">Terms & Privacy</h5>
+                <h5 class="fw-bold">FAQ's</h5>
+                <hr>
+            </div>
+            <hr>
+        </div>
+        </div> -->
+        <!-- Copyright -->
+        <!-- <div class="kkk">
+            <div class="footer_container container-fluid d-flex justify-content-between text-white"
+                style="background-color: rgba(0, 0, 0, 0.416);width: 100%;">
+                <div class="footer_logo d-flex"><img src="./Assets/IMG//logowubg 5.png" alt="footer_logo" height="70px">
+                    <h4 class="footer_logo_heading ms-3 mt-auto">STREAM EASE</h4>
+                </div>
+                <div class="footer_copyright">
+                    <p class="text-white d-inline">© 2023 Copyright:</p>
+                    <a href="#"> StreamEase.com</a>
+                </div>
+            </div>
+        </div> -->
+        <!-- Copyright -->
+    </footer>
+
+    <!-- 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+    crossorigin="anonymous"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.min.js"></script>
+    <script src="slider.js"></script>
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const updateButton = document.getElementById("updateButton");
+            const oldParagraph = document.getElementById("oldParagraph");
+
+            updateButton.addEventListener("click", () => {
+                // Show SweetAlert input dialog
+                Swal.fire({
+                    title: 'Enter Date In Number Only',
+                    input: 'text',
+                    showCancelButton: true,
+                    confirmButtonText: 'Update',
+                    cancelButtonText: 'Cancel'
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        const newContent = result.value;
+
+                        // Create a new <p> tag with the new content
+                        const newParagraph = document.createElement("p");
+                        newParagraph.id = "abc";
+                        newParagraph.textContent = newContent;
+
+                        // Replace the old <p> tag with the new one
+                        oldParagraph.replaceWith(newParagraph);
+
+                        // Show success message with SweetAlert
+                        Swal.fire({
+                            title: 'Content updated!',
+                            icon: 'success',
+                            showConfirmButton: false,
+                            timer: 1500
+                        });
+                    }
+                });
+            });
+        });
+
+
+        function updateTimer(targetDate, timerId) {
+            const currentDate = new Date();
+            const timeRemaining = targetDate - currentDate;
+
+            if (timeRemaining <= 0) {
+                document.querySelector(`#${timerId} .countdown`).innerHTML = "Countdown expired!";
+                return;
+            }
+            const days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
+
+            const timerText = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+            document.querySelector(`#${timerId} .countdown`).innerHTML = timerText;
+        }
+
+        const timer1TargetDate = new Date('2023-10-25T00:00:00');
+        setInterval(() => updateTimer(timer1TargetDate, 'timer1'), 1000);
+
+        const timer2TargetDate = new Date('2023-08-25T00:00:00');
+        setInterval(() => updateTimer(timer2TargetDate, 'timer2'), 1000);
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const loggedInUserJSON = localStorage.getItem("loggedInUser");
+            const loggedInUser = JSON.parse(loggedInUserJSON);
+
+            if (loggedInUser) {
+                const profileUsername = document.getElementById("profileUsername");
+                profileUsername.textContent = loggedInUser.username;
+
+                const profileUserId = document.getElementById("profileUserId");
+                // Generate an automatic ID (for demonstration purposes)
+                const randomId = Math.floor(Math.random() * 1000000);
+                profileUserId.textContent = `Id : ${String(randomId).padStart(6, '0')}`;
+            }
+
+
+
+            const deleteButtons = document.querySelectorAll(".delete-button");
+            deleteButtons.forEach(button => {
+                button.addEventListener("click", handleDelete);
+            });
+
+
+            function handleDelete(event) {
+                const cardId = event.target.getAttribute("data-card-id");
+                deleteCard(cardId);
+            }
+
+
+            function deleteCard(cardId) {
+                const card = document.getElementById(cardId);
+                if (card) {
+                    card.remove();
+                }
+            }
+        });
+
+
+
+    </script>
+
+
+
+    <!-- JSON File -->
+    <script src="Assets/JS/movies.json"></script>
+    <script src="Assets/JS/notification.json"></script>
+
+    <!-- Custom JavaScript File -->
+    <script src="./Assets/JS/app.js"></script>
+</body>
+
+</html>
